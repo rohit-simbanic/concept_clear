@@ -194,3 +194,109 @@ Updating the global React state on every chunk upload (which can fire dozens of 
     });
     ```
 *   **React's Internal Delegation:** React already handles this internally. When we write `onClick={handleAction}` on individual JSX button elements, React does not attach direct listeners to the DOM nodes. It leverages its **Synthetic Event System**, capturing all events bubbling up to the root container (`#root`), mapping the event to the correct React element, and running the handler. This keeps React memory usage highly optimized.
+
+---
+
+## 3. 10 Behavioral & Cultural Fit Interview Questions & Answers
+
+### **Q11: Why do you want to join IDrive Software?**
+> **Question:** Why do you want to work at IDrive Software specifically, rather than any other tech company?
+
+**Answer:**
+*   **Aligning with Product Impact:** IDrive is a global leader in cloud storage, backup, and remote desktop services. I want to build UIs that millions of users rely on to manage their most critical data.
+*   **Engineering Challenges:** The UI of backup and remote access systems involves unique frontend engineering challenges—such as handling WebSockets, chunked file uploaders, rendering massive virtualized lists, and ensuring responsive layouts for complex data structures. Joining IDrive means solving deep technical problems, not just building simple landing pages.
+*   **Growth Environment:** IDrive has a strong presence in the SaaS product space. Working here will give me exposure to product-driven development cycles, scaling performance-critical web applications, and learning how a global brand manages disaster recovery portals.
+
+---
+
+### **Q12: What contribution can you bring to the UI team at IDrive?**
+> **Question:** What value or contribution can you make to our engineering team from day one?
+
+**Answer:**
+*   **Strong Technical Foundations:** I bring deep knowledge of JavaScript core mechanics, CSS optimizations, and modern React architectures, which translates to cleaner, more maintainable code.
+*   **Performance Optimization Focus:** Since IDrive handles large amounts of administrative and file data, I can contribute by auditing UI load times, optimizing page rendering (via code splitting and virtualization), and keeping application bundles lightweight.
+*   **Bridging UX and Engineering:** I am passionate about pixel-perfect implementation. I can bridge the gap between design mocks and clean code, ensuring that accessibility (a11y) and user experience are never compromised.
+*   **Collaborative Mindset:** I believe in sharing knowledge. I will actively participate in code reviews, contribute to writing clean reusable component libraries, and collaborate with backend teams to integrate APIs smoothly.
+
+---
+
+### **Q13: How do you handle conflicts or misalignments with backend developers regarding API designs?**
+> **Question:** Imagine you are building a new backup history view, but the API response structure provided by the backend team is inefficient for rendering the frontend. How would you handle this situation?
+
+**Answer:**
+*   **Collaborate and Communicate First:** I would set up a quick sync with the backend engineer. I would explain *why* the current format is problematic (e.g., it requires too much array manipulation on the client-side, causing UI lag on lower-end devices).
+*   **Propose a Solution:** I would suggest a mutually beneficial JSON structure (like pre-paginated data or normalized arrays) that minimizes client-side data sorting.
+*   **Adapter Pattern Fallback:** If the backend API cannot be modified due to legacy systems, I would implement an **Adapter Layer** in the frontend client. This layer transforms the raw, nested API response into a clean, normalized structure before it reaches React's state, keeping our component rendering logic clean and fast.
+
+---
+
+### **Q14: How do you work with UI/UX designers to implement pixel-perfect designs?**
+> **Question:** Sometimes designers create complex mockups (like real-time backup graphs or custom interactive charts) that are challenging to code. How do you handle this?
+
+**Answer:**
+*   **Early Feedback Loop:** I prefer collaborating with designers during the wireframing phase, rather than receiving mocks at the last minute. This allows me to flag potential performance bottlenecks or complex custom layouts early.
+*   **Using standard design systems:** I advocate for using a consistent set of design tokens (spacings, typography, color palettes) to ensure design system consistency.
+*   **Prototyping:** For complex animations or custom charts, I create quick sandbox prototypes (using CSS, SVG, or Canvas) to validate performance and interactivity. If a mock is completely unviable for the web, I present a performant alternative that preserves the design's core intent.
+
+---
+
+### **Q15: Tell me about a time you had to fix a complex, high-priority bug in production. How did you approach it?**
+> **Question:** Can you share a scenario where you solved a major production issue under pressure?
+
+**Answer:**
+*   **Situation:** In a previous project, users were experiencing a severe page freeze when loading a dashboard with large data grids on Safari mobile browsers.
+*   **Action:** 
+    1.  *Isolate:* I reproduced the issue locally using Safari developer tools and traced the CPU activity in the Performance Profiler.
+    2.  *Identify:* I found that the grid component was performing heavy computation and DOM re-paints on every window resize and scroll event, triggering layout thrashing.
+    3.  *Fix:* I wrapped the event listener with a throttled callback (limiting triggers to every 150ms) and optimized the CSS to avoid layout invalidations.
+*   **Outcome:** The CPU utilization dropped by 70%, and the page scrolling became fluid. I pushed a hotfix, verified it across browsers, and wrote a post-mortem to share the fix with the team.
+
+---
+
+### **Q16: How do you handle changes in product requirements mid-development?**
+> **Question:** How do you react when product managers suddenly request a change in a feature you've already spent days developing?
+
+**Answer:**
+*   **Adaptability:** I understand that in a SaaS environment like IDrive, customer feedback and market demands can trigger sudden pivots. I don't take it personally.
+*   **Impact Assessment:** I assess the technical impact of the requested change. I check if it fits into our existing component state model or if it requires rewriting APIs/routes.
+*   **Transparent Communication:** I communicate the tradeoffs to the Product Manager (e.g., "Adding this feature now will delay the release by two days, or we can release version 1 today and add this in version 1.1"). This allows us to make data-driven decisions.
+
+---
+
+### **Q17: How do you prioritize performance versus visual flair in UI development?**
+> **Question:** When building web dashboards, would you prioritize high-end animations/effects or raw load times and rendering speeds?
+
+**Answer:**
+*   **Performance is Part of UX:** For a cloud backup portal like IDrive, raw performance *is* the user experience. A gorgeous animation is useless if the user is waiting 5 seconds for their backup folder tree to render.
+*   **Balanced Approach:** I prioritize core performance (TTI, FCP, fluid scrolling) first. Once the app is fast and stable, I add subtle, micro-animations (like hover transitions, loading skeletons, or fade-ins) using CSS hardware-accelerated properties (`transform`, `opacity`) so the visual flair doesn't impact performance.
+
+---
+
+### **Q18: How do you handle constructive feedback on your code reviews?**
+> **Question:** How do you react when a senior developer requests major changes to a pull request you've put a lot of effort into?
+
+**Answer:**
+*   **Egoless Code Reviews:** I treat code reviews as a collaborative learning opportunity, not a personal critique. The goal is to build the best product for the company.
+*   **Analyze and Learn:** I carefully read their suggestions. If the feedback is about code optimization, security, or readability, I implement it immediately and thank them for the insight.
+*   **Constructive Discussion:** If I disagree with a suggestion, I don't argue. I explain my rationale with code patterns or performance metrics and ask for their opinion, working together to reach the best solution.
+
+---
+
+### **Q19: How do you keep yourself updated with the rapidly changing frontend landscape?**
+> **Question:** The JavaScript ecosystem changes constantly. How do you decide what tools/patterns to learn next?
+
+**Answer:**
+*   **Continuous Learning:** I follow tech blogs (like Dev.to, Medium, Vercel/React updates), read newsletters (like JavaScript Weekly, Frontend Focus), and check GitHub trending repositories.
+*   **Focused Learning:** I filter out temporary hype and focus on tools that solve real business problems (e.g., learning React 19's server components or state management optimizations that can improve app speed and SEO).
+*   **Hands-on Sandboxing:** I build small proof-of-concept projects to test new libraries before proposing them in production.
+
+---
+
+### **Q20: Explain a situation where you had a disagreement with a team member. How did you resolve it?**
+> **Question:** How do you handle interpersonal conflicts or technical disagreements within a development team?
+
+**Answer:**
+*   **Objective Focus:** I steer the discussion away from personal opinions towards objective metrics and facts (e.g., bundle size, code readability, performance stats).
+*   **Acknowledge and Listen:** I listen to their perspective fully without interrupting. Often, disagreements arise because both sides are trying to solve different aspects of the same problem.
+*   **Collaborate on Proof of Concept (PoC):** If we are split between two architectural approaches, I propose coding a small, quick PoC for both. We test them side-by-side, analyze the metrics, and choose the one that performs better and is easier to maintain.
+
