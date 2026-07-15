@@ -197,53 +197,84 @@ Updating the global React state on every chunk upload (which can fire dozens of 
 
 ---
 
-## 3. 10 Behavioral & Cultural Fit Interview Questions & Answers
+## 3. 10 Behavioral & Cultural Fit Interview Questions & Answers (with Bangla Translation)
 
-### **Q11: Why do you want to join IDrive Software?**
+### **Q11: Why do you want to join IDrive Software? / কেন আপনি আইডিরাইভ সফটওয়্যারে জয়েন করতে চান?**
 > **Question:** Why do you want to work at IDrive Software specifically, rather than any other tech company?
+> 
+> *অন্য কোনো প্রযুক্তি কোম্পানির তুলনায় কেন আপনি আইডিরাইভ সফটওয়্যারে কাজ করতে চান?*
 
-**Answer:**
+**Answer (English):**
 *   **Aligning with Product Impact:** IDrive is a global leader in cloud storage, backup, and remote desktop services. I want to build UIs that millions of users rely on to manage their most critical data.
 *   **Engineering Challenges:** The UI of backup and remote access systems involves unique frontend engineering challenges—such as handling WebSockets, chunked file uploaders, rendering massive virtualized lists, and ensuring responsive layouts for complex data structures. Joining IDrive means solving deep technical problems, not just building simple landing pages.
 *   **Growth Environment:** IDrive has a strong presence in the SaaS product space. Working here will give me exposure to product-driven development cycles, scaling performance-critical web applications, and learning how a global brand manages disaster recovery portals.
 
+**অনুবাদ (Bangla Translation):**
+*   **প্রোডাক্টের প্রভাবের সাথে নিজের উদ্দেশ্য মেলানো:** আইডিরাইভ হলো ক্লাউড স্টোরেজ, ব্যাকআপ এবং রিমোট ডেস্কটপ সার্ভিসে গ্লোবাল লিডার। আমি এমন ইউজার ইন্টারফেস (UI) তৈরি করতে চাই যা লাখ লাখ মানুষ তাদের অতি প্রয়োজনীয় ডাটা নিরাপদে সংরক্ষণ করার জন্য ব্যবহার করে।
+*   **ইঞ্জিনিয়ারিং চ্যালেঞ্জ:** ব্যাকআপ এবং রিমোট এক্সেস সিস্টেমের জন্য ইউআই তৈরি করার ক্ষেত্রে দারুণ সব ফ্রন্টএন্ড ইঞ্জিনিয়ারিং চ্যালেঞ্জ মোকাবেলা করতে হয়—যেমন WebSockets হ্যান্ডেল করা, চাঙ্কড ফাইল আপলোডার তৈরি, বিশাল বড় ফাইল তালিকার ভার্চুয়ালাইজেশন করা এবং জটিল ডাটা স্ট্রাকচারের জন্য রেসপন্সিভ লেআউট তৈরি করা। আইডিরাইভ-এ আসার মানে হলো সাধারণ ল্যান্ডিং পেজ বানানোর বাইরে গিয়ে বাস্তবমুখী ও গভীর টেকনিক্যাল সমস্যার সমাধান করা।
+*   **ক্যারিয়ার গ্রোথ:** আইডিরাইভ-এর SaaS প্রোডাক্ট লাইনে ভালো কাজের পরিবেশ রয়েছে। এখানে কাজ করলে আমি প্রোডাক্ট-ড্রিভেন ডেভেলপমেন্ট সাইকেল, হাই-পারফরম্যান্স ওয়েব অ্যাপ স্কেলিং এবং বিশ্বের অন্যতম বড় একটি ব্র্যান্ডের ডাটা রিকভারি পোর্টাল ম্যানেজমেন্ট সম্পর্কে প্রত্যক্ষ অভিজ্ঞতা পাব।
+
 ---
 
-### **Q12: What contribution can you bring to the UI team at IDrive?**
+### **Q12: What contribution can you bring to the UI team at IDrive? / আইডিরাইভ-এর ইউআই টিমে আপনি কী অবদান রাখতে পারবেন?**
 > **Question:** What value or contribution can you make to our engineering team from day one?
+> 
+> *প্রথম দিন থেকেই আমাদের ইঞ্জিনিয়ারিং টিমে আপনি কী ধরনের অবদান রাখতে পারবেন?*
 
-**Answer:**
+**Answer (English):**
 *   **Strong Technical Foundations:** I bring deep knowledge of JavaScript core mechanics, CSS optimizations, and modern React architectures, which translates to cleaner, more maintainable code.
 *   **Performance Optimization Focus:** Since IDrive handles large amounts of administrative and file data, I can contribute by auditing UI load times, optimizing page rendering (via code splitting and virtualization), and keeping application bundles lightweight.
 *   **Bridging UX and Engineering:** I am passionate about pixel-perfect implementation. I can bridge the gap between design mocks and clean code, ensuring that accessibility (a11y) and user experience are never compromised.
 *   **Collaborative Mindset:** I believe in sharing knowledge. I will actively participate in code reviews, contribute to writing clean reusable component libraries, and collaborate with backend teams to integrate APIs smoothly.
 
+**অনুবাদ (Bangla Translation):**
+*   **মজবুত টেকনিক্যাল ফাউন্ডেশন:** জাভাস্ক্রিপ্টের কোর মেকানিজম, সিএসএস অপ্টিমাইজেশন এবং আধুনিক রিয়্যাক্ট আর্কিটেকচার সম্পর্কে আমার ভালো ধারণা আছে, যা টিমে আরও ক্লিন ও সহজে মেইনটেইনযোগ্য কোড লিখতে সাহায্য করবে।
+*   **পারফরম্যান্স অপ্টিমাইজেশন:** যেহেতু আইডিরাইভ প্রচুর পরিমাণ ফাইল ও অ্যাডমিনিস্ট্রেটিভ ডাটা নিয়ে কাজ করে, তাই আমি UI লোডিং টাইম অডিট, কোড স্প্লিটিং এবং ভার্চুয়ালাইজেশনের মাধ্যমে রেন্ডারিং প্রসেস অপ্টিমাইজ করতে এবং মূল বান্ডেল সাইজ হালকা রাখতে কাজ করব।
+*   **ডিজাইন এবং ডেভেলপমেন্টের মেলবন্ধন:** আমি পিক্সেল-পারফেক্ট ইউআই তৈরিতে অত্যন্ত যত্নশীল। ডিজাইনারদের পাঠানো মকআপ এবং মূল কোডের মাঝখানের দূরুত্ব কমিয়ে আমি এমন কোড লিখব যা একাধারে অ্যাক্সেসিবল (a11y) এবং ইউজার ফ্রেন্ডলি হবে।
+*   **দলগত কাজের মানসিকতা:** আমি জ্ঞান শেয়ার করতে পছন্দ করি। নিয়মিত কোড রিভিউতে অংশ নেওয়া, রি-ইউজেবল কম্পোনেন্ট লাইব্রেরি তৈরি এবং ব্যাকএন্ড টিমের সাথে মিলে ডেটা এপিআই মসৃণভাবে ইন্টিগ্রেট করতে আমি অবদান রাখব।
+
 ---
 
-### **Q13: How do you handle conflicts or misalignments with backend developers regarding API designs?**
+### **Q13: How do you handle conflicts or misalignments with backend developers regarding API designs? / এপিআই ডিজাইন নিয়ে ব্যাকএন্ড ডেভেলপারদের সাথে মতবিরোধ কীভাবে সমাধান করেন?**
 > **Question:** Imagine you are building a new backup history view, but the API response structure provided by the backend team is inefficient for rendering the frontend. How would you handle this situation?
+> 
+> *মনে করুন আপনি একটি নতুন ব্যাকআপ হিস্ট্রি ভিউ তৈরি করছেন, কিন্তু ব্যাকঅ্যান্ড টিমের দেওয়া এপিআই রেসপন্স স্ট্রাকচারটি ফ্রন্টএন্ডে রেন্ডার করার জন্য অকার্যকর। আপনি কীভাবে এই পরিস্থিতি মোকাবেলা করবেন?*
 
-**Answer:**
+**Answer (English):**
 *   **Collaborate and Communicate First:** I would set up a quick sync with the backend engineer. I would explain *why* the current format is problematic (e.g., it requires too much array manipulation on the client-side, causing UI lag on lower-end devices).
 *   **Propose a Solution:** I would suggest a mutually beneficial JSON structure (like pre-paginated data or normalized arrays) that minimizes client-side data sorting.
 *   **Adapter Pattern Fallback:** If the backend API cannot be modified due to legacy systems, I would implement an **Adapter Layer** in the frontend client. This layer transforms the raw, nested API response into a clean, normalized structure before it reaches React's state, keeping our component rendering logic clean and fast.
 
+**অনুবাদ (Bangla Translation):**
+*   **প্রথমে যোগাযোগ ও সমন্বয়:** আমি ব্যাকএন্ড ইঞ্জিনিয়ারের সাথে একটি ছোট কলে কথা বলব। আমি ফ্রন্টএন্ডের দৃষ্টিকোণ থেকে কেন বর্তমান রেসপন্স ফরম্যাটটি পারফরম্যান্সে বাধা দিচ্ছে তা বুঝিয়ে বলব (যেমন- এটি ক্লায়েন্ট সাইডে অনেক বেশি অ্যারে প্রসেসিং করাচ্ছে, যা মোবাইল বা কম দামের ডিভাইসে ইউআই ল্যাগ তৈরি করছে)।
+*   **সমাধান প্রস্তাব করা:** আমি একটি পারস্পরিক সুবিধাজনক JSON স্ট্রাকচারের প্রস্তাব দেব (যেমন প্রাক-প্যাজিনেটেড ডাটা বা নরমালাইজড ডাটা), যা ক্লায়েন্ট সাইডের সর্টিংয়ের ওপর চাপ কমাবে।
+*   **অ্যাডাপ্টার প্যাটার্ন ব্যবহার করা:** যদি ব্যাকএন্ড সিস্টেমের সীমাবদ্ধতার কারণে এপিআই পরিবর্তন করা সম্ভব না হয়, তবে আমি ফ্রন্টএন্ডে একটি **Adapter Layer** লিখব। এই লেয়ারটি ব্যাকএন্ডের জটিল রেসপন্সকে রিয়্যাক্ট স্টেটে যাওয়ার আগেই পরিষ্কার, নরমালাইজড ডাটাতে রূপান্তর করবে যাতে রেন্ডারিং লজিক সহজ থাকে।
+
 ---
 
-### **Q14: How do you work with UI/UX designers to implement pixel-perfect designs?**
+### **Q14: How do you work with UI/UX designers to implement pixel-perfect designs? / পিক্সেল-পারফেক্ট ডিজাইন ইমপ্লিমেন্ট করতে আপনি কীভাবে UI/UX ডিজাইনারদের সাথে কাজ করেন?**
 > **Question:** Sometimes designers create complex mockups (like real-time backup graphs or custom interactive charts) that are challenging to code. How do you handle this?
+> 
+> *কখনও কখনও ডিজাইনাররা এমন জটিল মকআপ তৈরি করেন (যেমন রিয়েল-টাইম ব্যাকআপ গ্রাফ বা কাস্টম ইন্টারেক্টিভ চার্ট) যা কোড করা খুব কঠিন। আপনি কীভাবে এটি পরিচালনা করেন?*
 
-**Answer:**
+**Answer (English):**
 *   **Early Feedback Loop:** I prefer collaborating with designers during the wireframing phase, rather than receiving mocks at the last minute. This allows me to flag potential performance bottlenecks or complex custom layouts early.
 *   **Using standard design systems:** I advocate for using a consistent set of design tokens (spacings, typography, color palettes) to ensure design system consistency.
 *   **Prototyping:** For complex animations or custom charts, I create quick sandbox prototypes (using CSS, SVG, or Canvas) to validate performance and interactivity. If a mock is completely unviable for the web, I present a performant alternative that preserves the design's core intent.
 
+**অনুবাদ (Bangla Translation):**
+*   **আর্লি ফিডব্যাক লুপ:** আমি ডিজাইনের একদম শেষ মুহূর্তে মকআপ পাওয়ার চেয়ে ডিজাইনের প্রাথমিক বা ওয়ারফ্রেম তৈরির সময় থেকেই ডিজাইনারদের সাথে কাজ করতে পছন্দ করি। এতে ডিজাইনের শুরুতেই কোনো সম্ভাব্য পারফরম্যান্স ইস্যু বা জটিল লেআউট থাকলে তা নিয়ে কথা বলা যায়।
+*   **স্ট্যান্ডার্ড ডিজাইন সিস্টেম ব্যবহার:** আমি ডিজাইন ও ডেভেলপমেন্ট টিমের মাঝে স্পেসিং, কালার প্যালেট ও টাইপোগ্রাফির জন্য সুনির্দিষ্ট 'ডিজাইন টোকেন' বা গাইডলাইন মেনে চলায় উৎসাহিত করি।
+*   **প্রোটোটাইপিং:** কোনো জটিল অ্যানিমেশন বা চার্ট থাকলে তা মূল অ্যাপে বসানোর আগে কোডবক্সে বা লোকাল স্যান্ডবক্সে প্রোটোটাইপ বানিয়ে পারফরম্যান্স চেক করে নিই। যদি কোনো ডিজাইন ওয়েব ব্রাউজারের পারফরম্যান্সের জন্য ক্ষতিকর হয়, তবে আমি ডিজাইনারদের সাথে আলোচনা করে একটি বিকল্প কিন্তু দৃষ্টিনন্দন ডিজাইনের প্রস্তাব দিই।
+
 ---
 
-### **Q15: Tell me about a time you had to fix a complex, high-priority bug in production. How did you approach it?**
+### **Q15: Tell me about a time you had to fix a complex, high-priority bug in production. How did you approach it? / প্রোডাকশনের কোনো জটিল ও বড় বাগ সমাধানের বাস্তব উদাহরণ দিন। আপনি কীভাবে এগোবেন?**
 > **Question:** Can you share a scenario where you solved a major production issue under pressure?
+> 
+> *আপনি চাপের মধ্যে কোনো বড় প্রোডাকশন বাগ সমাধান করেছেন এমন একটি উদাহরণ শেয়ার করতে পারবেন কি?*
 
-**Answer:**
+**Answer (English):**
 *   **Situation:** In a previous project, users were experiencing a severe page freeze when loading a dashboard with large data grids on Safari mobile browsers.
 *   **Action:** 
     1.  *Isolate:* I reproduced the issue locally using Safari developer tools and traced the CPU activity in the Performance Profiler.
@@ -251,52 +282,95 @@ Updating the global React state on every chunk upload (which can fire dozens of 
     3.  *Fix:* I wrapped the event listener with a throttled callback (limiting triggers to every 150ms) and optimized the CSS to avoid layout invalidations.
 *   **Outcome:** The CPU utilization dropped by 70%, and the page scrolling became fluid. I pushed a hotfix, verified it across browsers, and wrote a post-mortem to share the fix with the team.
 
+**অনুবাদ (Bangla Translation):**
+*   **পরিস্থিতি (Situation):** আমার পূর্ববর্তী প্রজেক্টে সাফারি মোবাইল ব্রাউজারে একটি বড় ডেটা গ্রিড লোড হওয়ার সময় পেইজ পুরো হ্যাং বা ফ্রিজ হয়ে যেত।
+*   **পদক্ষেপ (Action):** 
+    1. *আইসোলেট করা:* আমি লোকালি সাফারি ডেভ টুলস চালু করে পারফরম্যান্স প্রোফাইলার দিয়ে ব্রাউজারের সিপিইউ অ্যাক্টিভিটি ট্র্যাক করি।
+    2. *শনাক্তকরণ:* আমি দেখতে পাই যে স্ক্রল এবং উইন্ডো রিসাইজ ইভেন্ট প্রতিবার ফায়ার হওয়ার সময় গ্রিড কম্পোনেন্টটি বারবার ভারী ক্যালকুলেশন এবং ডম রি-পেইন্ট করাচ্ছিল, যা লেআউট থ্র্যাশিং তৈরি করে।
+    3. *সমাধান:* আমি রিসাইজ ইভেন্ট লিসেনারটিকে থ্রটলড কলব্যাক দিয়ে র্যাপ করি (যাতে প্রতি ১৫০ মিলিসেকেন্ডে একবারের বেশি কল না হয়) এবং লেআউট রি-ফ্লো এড়াতে সিএসএস-এ পরিবর্তন আনি।
+*   **ফলাফল (Outcome):** এতে সিপিইউ ব্যবহার ৭০% কমে যায় এবং মোবাইল স্ক্রলিং স্মুথ হয়। আমি হটফিক্সটি রিলিজ করে সব ব্রাউজারে টেস্ট করি এবং দলের সাথে বিষয়টি শেয়ার করি।
+
 ---
 
-### **Q16: How do you handle changes in product requirements mid-development?**
+### **Q16: How do you handle changes in product requirements mid-development? / ডেভেলপমেন্টের মাঝামাঝি সময়ে প্রোডাক্টের রিকোয়ারমেন্ট পরিবর্তন হলে কীভাবে তা হ্যান্ডেল করেন?**
 > **Question:** How do you react when product managers suddenly request a change in a feature you've already spent days developing?
+> 
+> *আপনি বেশ কয়েক দিন ধরে যে ফিচারটি তৈরি করেছেন, প্রজেক্টের মাঝামাঝি সময়ে প্রোডাক্ট ম্যানেজার হঠাৎ করে সেটি পরিবর্তন করতে বললে আপনি কেমন প্রতিক্রিয়া দেখান?*
 
-**Answer:**
+**Answer (English):**
 *   **Adaptability:** I understand that in a SaaS environment like IDrive, customer feedback and market demands can trigger sudden pivots. I don't take it personally.
 *   **Impact Assessment:** I assess the technical impact of the requested change. I check if it fits into our existing component state model or if it requires rewriting APIs/routes.
 *   **Transparent Communication:** I communicate the tradeoffs to the Product Manager (e.g., "Adding this feature now will delay the release by two days, or we can release version 1 today and add this in version 1.1"). This allows us to make data-driven decisions.
 
+**অনুবাদ (Bangla Translation):**
+*   **মানিয়ে নেওয়া (Adaptability):** আইডিরাইভের মতো SaaS প্রোডাক্ট ডেভেলপমেন্টের ক্ষেত্রে কাস্টমারদের ফিডব্যাক বা মার্কেটের প্রয়োজনে হুট করে প্ল্যান পরিবর্তন হওয়া স্বাভাবিক। আমি এটিকে ব্যক্তিগতভাবে নিই না।
+*   **প্রভাব মূল্যায়ন (Impact Assessment):** আমি পরিবর্তনের ফলে কোডে কী কী প্রভাব পড়বে তা হিসাব করি (যেমন- আমাদের বর্তমান স্টেট ম্যানেজমেন্টে এটি মানাবে কি না নাকি নতুন রাউট বা এপিআই লাগবে)।
+*   **স্বচ্ছ যোগাযোগ (Transparent Communication):** আমি প্রোডাক্ট ম্যানেজারের কাছে এর ভালো-মন্দ দিক তুলে ধরি (যেমন- "এই ফিচারটি এখন যোগ করতে গেলে ডেলিভারি ২ দিন পিছিয়ে যেতে পারে, অথবা আমরা চাইলে v1 রিলিজ করে v1.1-এ এটি আনতে পারি")। এতে সিদ্ধান্ত নেওয়া সহজ হয়।
+
 ---
 
-### **Q17: How do you prioritize performance versus visual flair in UI development?**
+### **Q17: How do you prioritize performance versus visual flair in UI development? / ইউআই ডেভেলপমেন্টে পারফরম্যান্স বনাম ভিজ্যুয়াল অ্যানিমেশনের ক্ষেত্রে কোনটিকে অগ্রাধিকার দেন?**
 > **Question:** When building web dashboards, would you prioritize high-end animations/effects or raw load times and rendering speeds?
+> 
+> *ওয়েব ড্যাশবোর্ড তৈরি করার সময় আপনি কি আকর্ষণীয় অ্যানিমেশন/এফেক্ট নাকি দ্রুত লোড টাইম এবং রেন্ডারিং স্পিডকে অগ্রাধিকার দেবেন?*
 
-**Answer:**
+**Answer (English):**
 *   **Performance is Part of UX:** For a cloud backup portal like IDrive, raw performance *is* the user experience. A gorgeous animation is useless if the user is waiting 5 seconds for their backup folder tree to render.
 *   **Balanced Approach:** I prioritize core performance (TTI, FCP, fluid scrolling) first. Once the app is fast and stable, I add subtle, micro-animations (like hover transitions, loading skeletons, or fade-ins) using CSS hardware-accelerated properties (`transform`, `opacity`) so the visual flair doesn't impact performance.
 
+**অনুবাদ (Bangla Translation):**
+*   **পারফরম্যান্সই মূল ইউজার এক্সপেরিয়েন্স:** আইডিরাইভের মতো ক্লাউড ব্যাকআপ পোর্টালের ক্ষেত্রে দ্রুত ডাটা লোড ও পারফরম্যান্সই হলো আসল ইউজার এক্সপেরিয়েন্স। কোনো সুন্দর অ্যানিমেশনের কোনো মূল্য নেই যদি একজন ইউজার তার ফাইল ব্রাউজ করতে ৫ সেকেন্ড অপেক্ষা করতে বাধ্য হন।
+*   **ভারসাম্যপূর্ণ পদ্ধতি:** আমি প্রথমে অ্যাপের কোর পারফরম্যান্স (যেমন TTI, FCP ও স্মুথ স্ক্রলিং) নিশ্চিত করি। অ্যাপটি পুরোপুরি ফাস্ট ও স্টেবল হওয়ার পর আমি হালকা মাইক্রো-অ্যানিমেশন (যেমন হোভার ইফেক্ট, স্কেলিং বা ফেড-ইন) যোগ করি এবং এই ক্ষেত্রে সিএসএস হার্ডওয়্যার এক্সিলারেটেড প্রপার্টি (`transform`, `opacity`) ব্যবহার করি যাতে পারফরম্যান্সে কোনো প্রভাব না পড়ে।
+
 ---
 
-### **Q18: How do you handle constructive feedback on your code reviews?**
+### **Q18: How do you handle constructive feedback on your code reviews? / কোড রিভিউতে আসা গঠনমূলক সমালোচনাকে কীভাবে গ্রহণ করেন?**
 > **Question:** How do you react when a senior developer requests major changes to a pull request you've put a lot of effort into?
+> 
+> *আপনার অনেক পরিশ্রমের কোনো পুল রিকোয়েস্টে (PR) যখন সিনিয়র ডেভেলপার বড় কোনো পরিবর্তন করতে বলেন, তখন আপনি কেমন প্রতিক্রিয়া দেখান?*
 
-**Answer:**
+**Answer (English):**
 *   **Egoless Code Reviews:** I treat code reviews as a collaborative learning opportunity, not a personal critique. The goal is to build the best product for the company.
 *   **Analyze and Learn:** I carefully read their suggestions. If the feedback is about code optimization, security, or readability, I implement it immediately and thank them for the insight.
 *   **Constructive Discussion:** If I disagree with a suggestion, I don't argue. I explain my rationale with code patterns or performance metrics and ask for their opinion, working together to reach the best solution.
 
+**অনুবাদ (Bangla Translation):**
+*   **অহংকারহীন কোড রিভিউ (Egoless PR):** আমি কোড রিভিউকে ব্যক্তিগত সমালোচনা হিসেবে না দেখে এটিকে আমাদের শেখার ও কোডের মান ভালো করার চমৎকার মাধ্যম মনে করি। আমাদের মূল লক্ষ্য হলো সবচেয়ে ভালো প্রোডাক্ট তৈরি করা।
+*   **বিশ্লেষণ ও সংশোধন:** আমি রিভিউয়ের মতামতগুলো খুব মনোযোগ দিয়ে পড়ি। যদি তা কোড অপ্টিমাইজেশন, সিকিউরিটি বা পঠনযোগ্যতা বাড়াতে সাহায্য করে, আমি তা সাথে সাথে সংশোধন করি এবং তাদের ধন্যবাদ জানাই।
+*   **আলোচনা:** যদি কোনো সাজেশনের সাথে দ্বিমত থাকে, তবে আমি যুক্তিসঙ্গতভাবে আমার কারণ বা পারফরম্যান্স মেট্রিকস তুলে ধরি এবং সিনিয়র ডেভেলপারদের সাথে আলোচনা করে সেরা সিদ্ধান্তে পৌঁছাই।
+
 ---
 
-### **Q19: How do you keep yourself updated with the rapidly changing frontend landscape?**
+### **Q19: How do you keep yourself updated with the rapidly changing frontend landscape? / ফ্রন্টএন্ড প্রযুক্তির দ্রুত পরিবর্তনের সাথে আপনি নিজেকে কীভাবে আপডেট রাখেন?**
 > **Question:** The JavaScript ecosystem changes constantly. How do you decide what tools/patterns to learn next?
+> 
+> *জাভাস্ক্রিপ্ট ইকোসিস্টেম প্রতিনিয়ত পরিবর্তিত হচ্ছে। পরবর্তীতে কোন টুল বা প্যাটার্নটি শিখবেন তা কীভাবে নির্ধারণ করেন?*
 
-**Answer:**
+**Answer (English):**
 *   **Continuous Learning:** I follow tech blogs (like Dev.to, Medium, Vercel/React updates), read newsletters (like JavaScript Weekly, Frontend Focus), and check GitHub trending repositories.
 *   **Focused Learning:** I filter out temporary hype and focus on tools that solve real business problems (e.g., learning React 19's server components or state management optimizations that can improve app speed and SEO).
 *   **Hands-on Sandboxing:** I build small proof-of-concept projects to test new libraries before proposing them in production.
 
+**অনুবাদ (Bangla Translation):**
+*   **ক্রমাগত শেখা:** আমি নিয়মিত বিভিন্ন নামকরা ডেভ ব্লগ (যেমন Dev.to, Medium, Vercel/React updates), নিউজলেটার (যেমন JavaScript Weekly, Frontend Focus) পড়ি এবং GitHub-এ নতুন বা ট্রেন্ডিং হওয়া রিপোজিটরিগুলো ফলো করি।
+*   **প্রয়োজনীয় প্রযুক্তি ফিল্টার করা:** আমি সব সাময়িক ট্রেন্ডের পেছনে না ছুটে এমন প্রযুক্তি শিখি যা বাস্তব সমস্যা সমাধান করে (যেমন React 19 এর অ্যাকশন ও সার্ভার কম্পোনেন্ট, যা অ্যাপের গতি বাড়াতে এবং এসইও ঠিক রাখতে কাজে লাগে)।
+*   **পরীক্ষা-নিরীক্ষা:** প্রোডাকশনে কোনো নতুন লাইব্রেরি ব্যবহারের আগে আমি লোকাল স্যান্ডবক্স বা ছোট প্রজেক্টে তা ব্যবহার করে তার সুবিধা-অসুবিধা যাচাই করে নিই।
+
 ---
 
-### **Q20: Explain a situation where you had a disagreement with a team member. How did you resolve it?**
+### **Q20: Explain a situation where you had a disagreement with a team member. How did you resolve it? / সহকর্মীদের সাথে কোনো টেকনিক্যাল দ্বিমত বা অমিল হলে তা কীভাবে সমাধান করেছেন?**
 > **Question:** How do you handle interpersonal conflicts or technical disagreements within a development team?
+> 
+> *ডেভেলপমেন্ট টিমে কাজের ক্ষেত্রে কোনো ব্যক্তিগত বা টেকনিক্যাল দ্বিমত কীভাবে সমাধান করেন?*
 
-**Answer:**
+**Answer (English):**
 *   **Objective Focus:** I steer the discussion away from personal opinions towards objective metrics and facts (e.g., bundle size, code readability, performance stats).
 *   **Acknowledge and Listen:** I listen to their perspective fully without interrupting. Often, disagreements arise because both sides are trying to solve different aspects of the same problem.
 *   **Collaborate on Proof of Concept (PoC):** If we are split between two architectural approaches, I propose coding a small, quick PoC for both. We test them side-by-side, analyze the metrics, and choose the one that performs better and is easier to maintain.
+
+**অনুবাদ (Bangla Translation):**
+*   **ব্যক্তিগত মতামত বর্জন:** আমি আলোচনার সময় কোনো ব্যক্তিগত পছন্দের দিকে না গিয়ে সরাসরি অবজেক্টিভ মেট্রিকস, যেমন- বান্ডেল সাইজ, কোড রিডাবিলিটি, মেমোরি ব্যবহার ইত্যাদির ওপর ফোকাস করি।
+*   **মনোযোগ দিয়ে শোনা:** আমি তাদের দৃষ্টিভঙ্গি সম্পূর্ণ বোঝার চেষ্টা করি। প্রায়ই দেখা যায় আমরা দুজনেই একই সমস্যার দুটি আলাদা দিক সমাধান করার চেষ্টা করছি।
+*   **প্রুফ অব কনসেপ্ট (PoC):** যদি আমরা সিদ্ধান্ত নিতে না পারি কোন আর্কিটেকচার ভালো হবে, আমি দুটি ছোট PoC বানানোর প্রস্তাব দিই। আমরা দুই ধরনের কোড পাশাপাশি চালিয়ে পারফরম্যান্স ও মেইনটেইনেন্স চেক করি এবং যা ভালো পারফর্ম করে সেটিকেই গ্রহণ করি।
+
 
