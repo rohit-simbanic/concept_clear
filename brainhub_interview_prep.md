@@ -1,6 +1,6 @@
 # Mid-Level Full-Stack Engineer (Brainhub Role) Interview Questions & Answers
 
-This guide contains 17 in-depth, scenario-based interview questions tailored specifically to your experience and key achievements as a **Mid-Level Full-Stack Engineer at Brainhub**, with a dedicated deep-dive into your **AI Integration** architecture. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
+This guide contains 18 in-depth, scenario-based interview questions tailored specifically to your experience and key achievements as a **Mid-Level Full-Stack Engineer at Brainhub**, with a dedicated deep-dive into your **Projects, Features, and AI Integration** architecture. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
 
 ---
 
@@ -22,6 +22,7 @@ This guide contains 17 in-depth, scenario-based interview questions tailored spe
 15. Preventing Prompt Injection Attacks & Protecting PII in AI Integration Pipelines
 16. Overview: What types of AI features have you built across your projects?
 17. Integration Blueprint: How did you technically integrate these AI features into your MERN / Full-Stack stack?
+18. Projects & Core Features Overview: What type of production projects have you built for Brainhub, and what are their core technical features?
 
 ---
 
@@ -300,7 +301,7 @@ Across my full-stack projects, I have architected and integrated three major pro
 **অনুবাদ (Bangla Translation):**
 আমার প্রজেক্টগুলোতে আমি মূলত ৩টি প্রধান প্রোডাকশন-গ্রেড AI ফিচার ডিজাইন ও ইমপ্লিমেন্ট করেছি:
 1.  **কনভারসেশনাল সাপোর্ট অ্যাসিস্ট্যান্ট (GoNautika):** ফেরি যাত্রীদের জন্য একটি রিয়েল-টাইম AI চ্যাটবট যা টিকিটের স্ট্যাটাস, সময়সূচী, বাতিলকরণ পলিসি এবং ব্যাগেজ সংক্রান্ত প্রশ্নের উত্তর রিয়েল-টাইমে স্ট্রিম করে দেয়।
-2.  **AI-চালিত ডিসপ্যাচ ম্যাচিং ইঞ্জিনের স্কোরিং (ResQ Roadside Assistance):** দুর্ঘটনাকবলিত গাড়ি ও মেকানিকের দূরত্ব, মেকানিকের স্কিল, টো-ট্রাকের ধরণ এবং ট্রাফিক জ্যাম বিশ্লেষণ করে উপযুক্ত মেকানিক খুঁজে দেওয়ার স্কোর জেনারেট করে—যা ডিসপ্যাচের গতি ৩৫% বাড়ায়।
+2.  **AI-চালিত ডিসপ্যাচ ম্যাচিং ইঞ্জিনের স্কোরিং (ResQ Roadside Assistance):** দুর্ঘটনাকবলিত গাড়ি ও মেকানিকের দূরত্ব, মেকানিকের স্কিল, টো-ট্রাকের ধরণ এবং ট্রাফিক জ্যাম বিশ্লেষণ করে উপযুক্ত মেকানিক নির্বাচন করা হয়েছে।
 3.  **গাড়ির টেলিমেট্রি ডায়াগনস্টিকস ও সেফটি অ্যানালিটিক্স (Fleet Platform):** গাড়ির লাইভ সেন্সর ও জিপিএস ডাটা বিশ্লেষণ করে ঝুঁকিপূর্ণ ড্রাইভিং প্যাটার্ন শনাক্ত করা, সেফটি স্কোর দেওয়া এবং মেইনটেন্যান্স প্রেডিক্ট করা।
 
 ---
@@ -318,7 +319,39 @@ I integrated AI features seamlessly into the MERN stack using a modular, decoupl
 **অনুবাদ (Bangla Translation):**
 MERN স্ট্যাক আর্কিটেকচারে AI ফিচারগুলো যুক্ত করার সম্পূর্ণ টেকনিক্যাল পদ্ধতি:
 1.  **ব্যাকএন্ড এপিআই লেয়ার (Node.js/Express + Google Gen AI SDK):** এক্সপ্রেস ব্যাকএন্ডে অফিসিয়াল `@google/genai` SDK ইনস্টল করা হয়। API Key কে সম্পূর্ণ নিরাপদ রাখতে এটি কেবল সার্ভার পরিবেশের সিক্রেটে রাখা হতো (ক্লায়েন্টে কখনো পাঠানো হতো না)।
-2.  **রিয়েল-টাইম টোকেন স্ট্রিমিং (Socket.IO):** Gemini-র `generateContentStream()` থেকে ছোট ছোট টোকেন পাওয়ার সাথে সাথে Socket.IO ইভেন্টের মাধ্যমে ফ্রন্টএন্ডে পাঠিয়ে ৬০ FPS লাইভ টাইপিং অ্যানিমেশন তৈরি করা হতো।
+2.  **রিয়েল-টাইম টোকেন স্ট্রিমিং (Socket.IO):** Gemini-র `generateContentStream()` থেকে ছোট ছোট টোকেন পাওয়ার সাথে সাথে Socket.IO ইভেন্টের মাধ্যমে ক্লায়েন্টে পাঠিয়ে ৬০ FPS লাইভ টাইপিং অ্যানিমেশন তৈরি করা হতো।
 3.  **Structured JSON ও Function Calling:** লজিক্যাল ফিল্ডের জন্য Gemini-র `responseSchema` এবং `responseMimeType: "application/json"` অন করা হতো এবং ব্যাকএন্ডে **Zod Schema** দিয়ে ডেটা ভ্যালিডেশন করা হতো।
 4.  **স্টেট ও মেমোরি ম্যানেজমেন্ট (Redis + Redux/Zustand):** চ্যাট হিস্ট্রি মেমোরি নিয়ন্ত্রণে রাখতে Redis-এ `LTRIM` দিয়ে নির্দিষ্ট সংখ্যক কথা সেভ রাখা হতো এবং ফ্রন্টএন্ডে Redux/Zustand দিয়ে ইউআই আপডেট করা হতো।
 5.  **ফেল্ট টলারেন্স ও সিকিউরিটি:** AI ডাউন থাকলে `p-retry` দিয়ে রি-ট্রাই, দ্রুতগতির `flash` মডেলে রূপান্তর এবং পরিশেষে রুল-বেসড অ্যালগরিদমে অটো-ডিগ্রেড করার আর্কিটেকচার ছিল, যার ফলে এপিআই ফেইল করলেও প্রজেক্ট ১০০% চালু থাকত।
+
+---
+
+### **Q18: What type of production projects have you built during your experience at Brainhub, and what are their core technical features? / Brainhub এবং আপনার ক্যারিয়ারে আপনি কী কী ধরণের প্রোডাকশন প্রজেক্ট তৈরি করেছেন এবং সেগুলোর মূল টেকনিক্যাল ফিচারগুলো কী কী?**
+
+**Answer (English):**
+Throughout my role as a Mid-Level Full-Stack Engineer, I have architected and delivered 5 major production-grade web and desktop applications across real-time, offline-first, and AI-driven domains:
+
+1.  **GoNautika — AI-Integrated Ferry Booking Platform**
+    *   **Core Features:** Real-time seat reservation engine supporting **15,000+ monthly bookings**, live interactive seat locking (via Socket.IO & Redis), Razorpay payment gateway integration with HMAC-SHA256 webhooks, and an automated Gemini AI-powered customer support chatbot.
+2.  **ResQ — Emergency Roadside Assistance Platform**
+    *   **Core Features:** Real-time dispatcher tracking **500+ active service providers**, MongoDB `2dsphere` geospatial indexing (reducing query latency by 40%), Gemini AI match scoring engine (improving dispatch speed by 35%), and Redis/Bull background job queues processing 10k+ daily tasks.
+3.  **Fleet Management Platform**
+    *   **Core Features:** Real-time vehicle telemetry analytics (speed, GPS, engine diagnostics) built with Next.js, AI driver safety monitoring dashboards, smooth 60 FPS animations via Tailwind CSS & Framer Motion, and PWA capabilities with Workbox offline caching.
+4.  **SleekDraw — E2EE Collaborative Whiteboard**
+    *   **Core Features:** Real-time multi-user interactive canvas using Canvas API and WebSockets with **<50ms latency**, secured with End-to-End Encryption (E2EE) for user diagrams.
+5.  **EasyACC — Offline-First Billing & GST Accounting Software**
+    *   **Core Features:** Electron.js desktop application powered by RxDB and Dexie.js (IndexedDB) enabling **1,200+ offline checkouts** with 100% database sync reliability to MongoDB ACID transactions upon reconnecting.
+
+**অনুবাদ (Bangla Translation):**
+আমি আমার ক্যারিয়ারে রিয়েল-টাইম সিস্টেম, অফলাইন-ফার্স্ট এবং AI-চালিত প্ল্যাটফর্ম সহ মোট ৫টি প্রধান প্রোডাকশন অ্যাপ তৈরি করেছি:
+
+1.  **GoNautika — AI-Integrated Ferry Booking Platform**
+    *   **প্রধান ফিচারসমূহ:** **মাসিক ১৫,০০০+ বুকিং** হ্যান্ডেল করা রিয়েল-টাইম ফেরি বুকিং ইঞ্জিন, Socket.IO ও Redis দিয়ে লাইভ সিট লকিং, Razorpay পেমেন্ট ও HMAC সিগনেচার ভ্যালিডেশন এবং Gemini AI দিয়ে লাইভ কাস্টমার চ্যাটবট।
+2.  **ResQ — Emergency Roadside Assistance Platform**
+    *   **প্রধান ফিচারসমূহ:** **৫০০+ অ্যাক্টিভ মেকানিক** ট্র্যাক করা জিয়োস্পেশিয়াল প্ল্যাটফর্ম, MongoDB `2dsphere` ইনডেক্সিং (যা ল্যাটেন্সি ৪০% কমায়), Gemini AI ও Redux দিয়ে ডিসপ্যাচ ম্যাচিং (যা স্পিড ৩৫% বাড়ায়) এবং Redis/Bull Queue দিয়ে প্রতিদিন ১০,০০০+ ব্যাকগ্রাউন্ড টাস্ক প্রসেসিং।
+3.  **Fleet Management Platform**
+    *   **প্রধান ফিচারসমূহ:** Next.js দিয়ে গাড়ির লাইভ টেলিমেট্রি (জিপিএস, স্পিড) ট্র্যাকিং, AI ড্রাইভার সেফটি ড্যাশবোর্ড, Tailwind CSS ও Framer Motion দিয়ে ৬০ FPS অ্যানিমেশন এবং Workbox দিয়ে PWA অফলাইন সাপোর্ট।
+4.  **SleekDraw — E2EE Collaborative Whiteboard**
+    *   **প্রধান ফিচারসমূহ:** Canvas API ও WebSockets দিয়ে একাধিক ইউজারের রিয়েল-টাইম ক্যানভাস বোর্ডিং (**<৫০ms ল্যাটেন্সি**) এবং এন্ড-টু-এন্ড এনক্রিপশন (E2EE)।
+5.  **EasyACC — Offline-First Billing & GST Accounting Software**
+    *   **প্রধান ফিচারসমূহ:** Electron.js, RxDB ও Dexie.js দিয়ে অফলাইন ডেস্কটপ বিলিং অ্যাপ যা **১,২০০+ অফলাইন চেকআউট** নিশ্চিত করে এবং ইন্টারনেট আসামাত্রই MongoDB-র সাথে ১০০% সিঙ্ক হয়।
