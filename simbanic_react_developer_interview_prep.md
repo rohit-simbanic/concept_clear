@@ -1,6 +1,6 @@
 # React.js Developer (Simbanic Software Services Role) Interview Questions & Answers
 
-This guide contains 15 detailed, scenario-based interview questions tailored specifically to your experience as a **React.js Developer at Simbanic Software Services**. It covers key achievements such as shipping 3 production apps, boosting user retention by 25%, achieving 60 FPS rendering, reducing bundle size by 30%, enforcing Zod & React Hook Form security/validation, AI integrations, backend API performance, high-traffic management, and deployments on VPS servers and AWS. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
+This guide contains 16 detailed, scenario-based interview questions tailored specifically to your experience as a **React.js Developer at Simbanic Software Services**. It covers key achievements such as shipping 3 production apps, boosting user retention by 25%, achieving 60 FPS rendering, reducing bundle size by 30%, enforcing Zod & React Hook Form security/validation, AI integrations, backend API performance, high-traffic management, HackerRank Top 1% React Certification, and deployments on VPS servers and AWS. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
 
 ---
 
@@ -20,6 +20,7 @@ This guide contains 15 detailed, scenario-based interview questions tailored spe
 13. Deploying High-Performance React Apps on AWS (S3 + CloudFront CDN + Route 53)
 14. Automating CI/CD Pipelines for React Deployments (GitHub Actions)
 15. Cross-Functional QA Collaboration & Ensuring Zero-Regression Releases
+16. HackerRank Top 1% React Certification & Advanced Frontend Assessment Mastery
 
 ---
 
@@ -312,3 +313,25 @@ Maintaining high code quality across multiple production releases requires struc
 *   **অটোমেটেড টেস্টিং:** গুরুত্বপূর্ণ কাজের টেস্ট কেস **React Testing Library** দিয়ে লিখে রাখা হতো যাতে পুরোনো ফিচার নতুন কোডে না ভাঙে (Zero Regression)।
 *   **প্রিভিউ ইউআরএল:** প্রতিটি Pull Request-এর জন্য আলাদা স্টেজিং ইউআরএল অটোমেটিক জেনারেট হতো, যেখানে QA টিম মার্জ করার আগেই রিয়েল টেস্ট করে দেখতে পারত।
 *   **Sentry এরর ট্র্যাকিং:** প্রোডাকশনে কোনো আনহ্যান্ডেলড এরর হলে তা সাথে সাথে **Sentry**-তে ধরা পড়ত এবং ফিক্স করা হতো।
+
+---
+
+### **Q16: How did you achieve ranking in the top 1% on HackerRank's Frontend Developer (React) Assessment, and what technical concepts were evaluated? / HackerRank-এর Frontend Developer (React) পরীক্ষায় শীর্ষ ১% স্থান কীভাবে অর্জন করেছিলেন এবং কী কী টেকনিক্যাল বিষয়ে মূল্যায়ন করা হয়েছিল?**
+
+**Answer (English):**
+Ranking in the top 1% globally on HackerRank's standardized React assessment verified deep mastery of React internals and performance patterns:
+*   **Evaluated Concepts:**
+    1.  **Complex State Management & Side Effects:** Asynchronous state batching, custom hooks architecture, and edge-case lifecycle cleanup (`useEffect`).
+    2.  **Performance & Rendering Optimization:** Preventing unnecessary re-renders using `React.memo`, `useCallback`, `useMemo`, and key prop reconciliation.
+    3.  **DOM Manipulation & Refs:** Accessing DOM nodes using `useRef` and ref forwarding with `forwardRef()`.
+    4.  **Form Validation & State Integration:** Controlled components, input validation, and asynchronous form submission handling.
+*   **Significance:** Demonstrates battle-tested expertise in writing clean, bug-free, high-performance React code under strict time constraints.
+
+**অনুবাদ (Bangla Translation):**
+HackerRank-এর রিয়্যাক্ট পরীক্ষায় বিশ্বের শীর্ষ ১%-এ স্থান অর্জনের বিবরণ:
+*   **মূল্যায়ন হওয়া বিষয়সমূহ:**
+    ১. **জটিল স্টেট ও সাইড এফেক্ট:** কাস্টম হুক আর্কিটেকচার এবং `useEffect`-এর লাইফসাইকেল মেমোরি ফিক্স করা।
+    ২. **পারফরম্যান্স অপ্টিমাইজেশন:** `React.memo`, `useCallback`, `useMemo` দিয়ে অহেতুক রেন্ডারিং বন্ধ করা।
+    ৩. **DOM ও Refs:** `useRef` এবং `forwardRef()` দিয়ে কাস্টম ডম অ্যাক্সেস করা।
+    ৪. **ইনপুট ভ্যালিডেশন:** টাইপ-সেফ ফর্ম হ্যান্ডলিং।
+*   **গুরুত্ব:** এর মাধ্যমে প্রমানিত হয় যে আমি প্রোডাকশন-গ্রেড ফাস্ট ও বাগ-মুক্ত রিয়্যাক্ট কোড লিখতে পারদর্শী।

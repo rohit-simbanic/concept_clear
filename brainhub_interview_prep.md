@@ -1,6 +1,6 @@
-# Mid-Level Full-Stack Engineer (Brainhub Role) Interview Questions & Answers
+# Mid-Level Full-Stack Engineer (Brainhub Role & Resume Overview) Interview Questions & Answers
 
-This guide contains 18 in-depth, scenario-based interview questions tailored specifically to your experience and key achievements as a **Mid-Level Full-Stack Engineer at Brainhub**, with a dedicated deep-dive into your **Projects, Features, and AI Integration** architecture. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
+This guide contains 21 in-depth, scenario-based interview questions tailored specifically to your experience and key achievements as a **Mid-Level Full-Stack Engineer at Brainhub**, your **Open Source Contributions**, **Featured Projects (ResQ, GoNautika, SleekDraw, EasyAcc)**, and **Production Operations**. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
 
 ---
 
@@ -23,6 +23,9 @@ This guide contains 18 in-depth, scenario-based interview questions tailored spe
 16. Overview: What types of AI features have you built across your projects?
 17. Integration Blueprint: How did you technically integrate these AI features into your MERN / Full-Stack stack?
 18. Projects & Core Features Overview: What type of production projects have you built for Brainhub, and what are their core technical features?
+19. SleekDraw: E2EE Collaborative Whiteboard with Canvas API & WebSockets (<50ms Latency)
+20. Open Source Contributions: `mermaid-js` (PR #7926) & `excalidraw` (PR #11572)
+21. Production Operations: Zero-Downtime Deployment Releases & Automated Database Backup Systems
 
 ---
 
@@ -348,10 +351,56 @@ Throughout my role as a Mid-Level Full-Stack Engineer, I have architected and de
 1.  **GoNautika — AI-Integrated Ferry Booking Platform**
     *   **প্রধান ফিচারসমূহ:** **মাসিক ১৫,০০০+ বুকিং** হ্যান্ডেল করা রিয়েল-টাইম ফেরি বুকিং ইঞ্জিন, Socket.IO ও Redis দিয়ে লাইভ সিট লকিং, Razorpay পেমেন্ট ও HMAC সিগনেচার ভ্যালিডেশন এবং Gemini AI দিয়ে লাইভ কাস্টমার চ্যাটবট।
 2.  **ResQ — Emergency Roadside Assistance Platform**
-    *   **প্রধান ফিচারসমূহ:** **৫০০+ অ্যাক্টিভ মেকানিক** ট্র্যাক করা জিয়োস্পেশিয়াল প্ল্যাটফর্ম, MongoDB `2dsphere` ইনডেক্সিং (যা ল্যাটেন্সি ৪০% কমায়), Gemini AI ও Redux দিয়ে ডিসপ্যাচ ম্যাচিং (যা স্পিড ৩৫% বাড়ায়) এবং Redis/Bull Queue দিয়ে প্রতিদিন ১০,০০০+ ব্যাকগ্রাউন্ড টাস্ক প্রসেসিং।
+    *   **প্রধান ফিচারসমূহ:** **৫০ জন+ অ্যাক্টিভ মেকানিক** ট্র্যাক করা জিয়োস্পেশিয়াল প্ল্যাটফর্ম, MongoDB `2dsphere` ইনডেক্সিং (যা ল্যাটেন্সি ৪০% কমায়), Gemini AI ও Redux দিয়ে ডিসপ্যাচ ম্যাচিং (যা স্পিড ৩৫% বাড়ায়) এবং Redis/Bull Queue দিয়ে প্রতিদিন ১০,০০০+ ব্যাকগ্রাউন্ড টাস্ক প্রসেসিং।
 3.  **Fleet Management Platform**
     *   **প্রধান ফিচারসমূহ:** Next.js দিয়ে গাড়ির লাইভ টেলিমেট্রি (জিপিএস, স্পিড) ট্র্যাকিং, AI ড্রাইভার সেফটি ড্যাশবোর্ড, Tailwind CSS ও Framer Motion দিয়ে ৬০ FPS অ্যানিমেশন এবং Workbox দিয়ে PWA অফলাইন সাপোর্ট।
 4.  **SleekDraw — E2EE Collaborative Whiteboard**
     *   **প্রধান ফিচারসমূহ:** Canvas API ও WebSockets দিয়ে একাধিক ইউজারের রিয়েল-টাইম ক্যানভাস বোর্ডিং (**<৫০ms ল্যাটেন্সি**) এবং এন্ড-টু-এন্ড এনক্রিপশন (E2EE)।
 5.  **EasyACC — Offline-First Billing & GST Accounting Software**
     *   **প্রধান ফিচারসমূহ:** Electron.js, RxDB ও Dexie.js দিয়ে অফলাইন ডেস্কটপ বিলিং অ্যাপ যা **১,২০০+ অফলাইন চেকআউট** নিশ্চিত করে এবং ইন্টারনেট আসামাত্রই MongoDB-র সাথে ১০০% সিঙ্ক হয়।
+
+---
+
+### **Q19: How did you build SleekDraw, the E2EE Collaborative Whiteboard, achieving <50ms rendering latency and securing diagrams with End-to-End Encryption? / SleekDraw (E2EE Collaborative Whiteboard) তৈরি করার সময় ৫০ms-এর কম ল্যাটেন্সি এবং এন্ড-টু-এন্ড এনক্রিপশন (E2EE) কীভাবে ইমপ্লিমেন্ট করেছিলেন?**
+
+**Answer (English):**
+Building a real-time collaborative canvas requires high-performance rendering and client-side cryptography:
+*   **Low-Latency Canvas Rendering (<50ms):** Used HTML5 Canvas API paired with WebSockets. User stroke vectors were batched and emitted over WebSockets to rooms, rendering remote cursor movements and vector paths instantly using `requestAnimationFrame`.
+*   **End-to-End Encryption (E2EE):** Before emitting canvas vectors over WebSockets or persisting to the database, vector data was encrypted locally in the browser using the Web Crypto API (**AES-GCM 256-bit encryption**).
+*   **Zero-Knowledge Backend:** The Node.js/WebSocket server acts purely as a blind relay pass-through; decryption keys are derived from a hash fragment in the shared URL link (`#key=...`) and are never sent to or stored on the server.
+
+**অনুবাদ (Bangla Translation):**
+SleekDraw-তে রিয়েল-টাইম বোর্ডিং ও এনক্রিপশনের কৌশল:
+*   **কম ল্যাটেন্সি রেন্ডারিং (<৫০ms):** HTML5 Canvas API এবং WebSockets ব্যবহার করা হয়েছে। মাউসের স্ট্রোক ডাটা ক্যানভাসে ড্র করার সময় `requestAnimationFrame` দিয়ে ফাস্ট রেন্ডার করা হতো।
+*   **এন্ড-টু-এন্ড এনক্রিপশন (E2EE):** সার্ভারে বা সকেটে ডাটা পাঠানোর আগেই ব্রাউজারের Web Crypto API (**AES-GCM 256-bit**) দিয়ে ক্যানভাসের ড্রয়িং এনক্রিপ্ট করা হতো।
+*   **জিরো-নলেজ সার্ভার:** সার্ভারের কাছে কোনো ডিক্রিপশন কি (Key) থাকত না। ডিক্রিপশন কি কেবল ইউজারের শেয়ার করা লিঙ্ক হ্যাশে (`#key=...`) থাকত, ফলে সার্ভার অনারও কারো ড্রয়িং দেখতে পেত না।
+
+---
+
+### **Q20: What were your Open Source Contributions to `mermaid-js` (PR #7926) and `excalidraw` (PR #11572)? / `mermaid-js` (PR #7926) এবং `excalidraw` (PR #11572) ওপেন সোর্স প্রজেক্টে আপনার অবদান কী ছিল?**
+
+**Answer (English):**
+Contributing to popular open-source developer tools strengthened my deep core JavaScript and SVG/Canvas understanding:
+*   **`mermaid-js/mermaid` (PR #7926):** Contributed bug fixes and rendering performance enhancements for diagram parsing, optimizing SVG node layout calculations and edge path generation.
+*   **`excalidraw/excalidraw` (PR #11572):** Implemented collaborative canvas state handling improvements and fixed vector selection bounding box calculation bugs during multi-user element manipulation.
+*   **Impact:** Enhanced skills in reading massive production codebases, writing strict unit tests, adhering to strict open-source review standards, and understanding low-level graphics algorithms.
+
+**অনুবাদ (Bangla Translation):**
+ওপেন সোর্স কন্ট্রিবিউশন:
+*   **`mermaid-js/mermaid` (PR #7926):** ডায়াগ্রাম পার্সিং এবং SVG নোড রেন্ডারিং লজিকের পারফরম্যান্স উন্নত করতে বাগ ফিক্স ও প্যাচ কোড কন্ট্রিবিউট করা হয়েছে।
+*   **`excalidraw/excalidraw` (PR #11572):** একাধিক ইউজার একসাথে ছবি আঁকার সময় এলিমেন্ট সিলেকশন বাউন্ডারি বক্স এবং ক্যানভাস স্ট্যাটাসের বাগ ফিক্স করা হয়েছে।
+*   **শিক্ষা:** বড় কোডবেস পড়া, গ্রাফিক্স অলগরিদম বোঝা এবং গ্লোবাল কোড কোয়ালিটি মেনে কাজ করার অভিজ্ঞতা অর্জন।
+
+---
+
+### **Q21: How did you architect zero-downtime releases and automated backup systems for your 6+ production applications? / আপনার ৬+ প্রোডাকশন অ্যাপ্লিকেশনের জন্য জিরো-ডাউনটাইম রিলিজ (Zero-Downtime Releases) এবং অটোমেটেড ব্যাকআপ সিস্টেম কীভাবে সাজিয়েছিলেন?**
+
+**Answer (English):**
+Ensuring 99.99% application uptime during new feature deployments and protecting database records:
+*   **Zero-Downtime Releases:** Used **PM2 Reload / Cluster Mode** or **Nginx Blue-Green / Rolling Deployments** on VPS and AWS. When a new deployment triggers, new worker processes start up and pass health checks before Nginx routes traffic to them, terminating old workers smoothly with zero dropped requests.
+*   **Automated Database Backups:** Configured daily automated cron jobs to create compressed MongoDB dumps (`mongodump --gzip`), encrypting the backup archives and uploading them to isolated AWS S3 cold storage buckets with 30-day lifecycle expiration policies.
+
+**অনুবাদ (Bangla Translation):**
+সার্ভার বন্ধ না রেখে নতুন ভার্সন রিলিজ (Zero-Downtime) ও অটো ব্যাকআপের উপায়:
+*   **জিরো-ডাউনটাইম রিলিজ:** Nginx এবং PM2 Cluster/Reload ব্যবহার করে নতুন ভার্সনের হেলথ চেক সফল হওয়ার পরই কেবল ট্রাফিক নতুন সার্ভারে ডাইভার্ট করা হতো, ফলে ইউজার কোনো পেজ ক্র্যাশ পেত না।
+*   **অটোমেটেড ব্যাকআপ:** প্রতিদিন নির্দিষ্ট সময়ে Cron Job দিয়ে MongoDB ডাটাবেজের কমপ্রেসড ব্যাকআপ (`mongodump`) তৈরি করে এনক্রিপ্ট অবস্থায় সুরক্ষিত AWS S3 বাকেটে পাঠিয়ে সেভ রাখা হতো।
