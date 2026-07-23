@@ -1,6 +1,6 @@
 # Mid-Level Full-Stack Engineer (Brainhub Role) Interview Questions & Answers
 
-This guide contains 15 in-depth, scenario-based interview questions tailored specifically to your experience and key achievements as a **Mid-Level Full-Stack Engineer at Brainhub**, with a dedicated deep-dive into your **AI Integration** architecture. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
+This guide contains 17 in-depth, scenario-based interview questions tailored specifically to your experience and key achievements as a **Mid-Level Full-Stack Engineer at Brainhub**, with a dedicated deep-dive into your **AI Integration** architecture. Each question includes a comprehensive technical answer in English and a complete Bangla translation.
 
 ---
 
@@ -20,6 +20,8 @@ This guide contains 15 in-depth, scenario-based interview questions tailored spe
 13. Managing Gemini AI Rate Limits, Timeouts, Retries, and Model Fallbacks in Production
 14. Implementing Retrieval-Augmented Generation (RAG) & Vector Search for AI Support
 15. Preventing Prompt Injection Attacks & Protecting PII in AI Integration Pipelines
+16. Overview: What types of AI features have you built across your projects?
+17. Integration Blueprint: How did you technically integrate these AI features into your MERN / Full-Stack stack?
 
 ---
 
@@ -284,3 +286,39 @@ AI সিস্টেমে নিরাপত্তা ও ইউজারে�
 *   **PII ডেটা মাস্কিং:** Gemini AI-তে প্রম্পট পাঠানোর আগে এক্সপ্রেস ব্যাকএন্ডে ইউজারের ফোন নম্বর, ক্রেডিট কার্ড বা ঠিকানা স্যানিটাইজ করে গোপন (`[REDACTED_PHONE]`) করা হতো।
 *   **Safety Settings:** Gemini-র `harmBlockThreshold` কনফিগার করে ক্ষতিকারক বা আপত্তিকর কথা বন্ধ করা হতো।
 *   **আউটপুট স্যানিটাইজেশন:** AI-এর পাঠানো রেসপন্স রিয়্যাক্ট ইউআই-তে দেখানোর আগে `DOMPurify` দিয়ে পরিষ্কার করা হতো যাতে XSS হ্যাকিং না হতে পারে।
+
+---
+
+### **Q16: What types of AI features have you built across your projects? / আপনার প্রজেক্টগুলোতে আপনি কী কী ধরণের AI ফিচার তৈরি করেছেন?**
+
+**Answer (English):**
+Across my full-stack projects, I have architected and integrated three major production-grade AI features:
+1.  **Conversational Support Assistant (GoNautika - Ferry Platform):** A real-time passenger support chatbot that resolves queries about ferry schedules, ticket statuses, cancellation policies, and baggage rules via streaming WebSockets.
+2.  **AI-Driven Dispatching & Match Scoring Engine (ResQ - Emergency Roadside Assistance):** An automated matching engine that evaluates stranded vehicle telemetry, service provider skills, tow truck types, live traffic, and historical response times to calculate match confidence scores—improving dispatch speed by 35%.
+3.  **AI Vehicle Diagnostics & Driver Safety Analytics (Fleet Management Platform):** An intelligent analytics pipeline that processes real-time vehicle telemetry feeds to detect risky driving behaviors (sudden braking, speeding), generate safety compliance scores, and predict maintenance requirements.
+
+**অনুবাদ (Bangla Translation):**
+আমার প্রজেক্টগুলোতে আমি মূলত ৩টি প্রধান প্রোডাকশন-গ্রেড AI ফিচার ডিজাইন ও ইমপ্লিমেন্ট করেছি:
+1.  **কনভারসেশনাল সাপোর্ট অ্যাসিস্ট্যান্ট (GoNautika):** ফেরি যাত্রীদের জন্য একটি রিয়েল-টাইম AI চ্যাটবট যা টিকিটের স্ট্যাটাস, সময়সূচী, বাতিলকরণ পলিসি এবং ব্যাগেজ সংক্রান্ত প্রশ্নের উত্তর রিয়েল-টাইমে স্ট্রিম করে দেয়।
+2.  **AI-চালিত ডিসপ্যাচ ম্যাচিং ইঞ্জিনের স্কোরিং (ResQ Roadside Assistance):** দুর্ঘটনাকবলিত গাড়ি ও মেকানিকের দূরত্ব, মেকানিকের স্কিল, টো-ট্রাকের ধরণ এবং ট্রাফিক জ্যাম বিশ্লেষণ করে উপযুক্ত মেকানিক খুঁজে দেওয়ার স্কোর জেনারেট করে—যা ডিসপ্যাচের গতি ৩৫% বাড়ায়।
+3.  **গাড়ির টেলিমেট্রি ডায়াগনস্টিকস ও সেফটি অ্যানালিটিক্স (Fleet Platform):** গাড়ির লাইভ সেন্সর ও জিপিএস ডাটা বিশ্লেষণ করে ঝুঁকিপূর্ণ ড্রাইভিং প্যাটার্ন শনাক্ত করা, সেফটি স্কোর দেওয়া এবং মেইনটেন্যান্স প্রেডিক্ট করা।
+
+---
+
+### **Q17: How did you technically integrate these AI features into your MERN / Full-Stack tech stack? / আপনার MERN / Full-Stack প্রজেক্ট আর্কিটেকচারে আপনি কীভাবে এই AI ফিচারগুলো যুক্ত (Integrate) করেছিলেন?**
+
+**Answer (English):**
+I integrated AI features seamlessly into the MERN stack using a modular, decoupled architecture:
+1.  **Backend Integration Layer (Node.js/Express + Google Gen AI SDK):** Initialized the official Google Gen AI SDK on the Express backend (`@google/genai`). Kept API keys strictly secured on the server using environment variables (`process.env.GEMINI_API_KEY`) to prevent client-side exposure.
+2.  **Real-Time Token Streaming (Socket.IO):** Piped `generateContentStream()` token chunks over Socket.IO directly to the React frontend (`ai-stream-chunk` events), delivering a smooth 60 FPS live typing animation without blocking the main UI thread.
+3.  **Structured JSON Enforcement & Function Calling:** Configured `generationConfig` with `responseSchema` for API endpoints requiring deterministic JSON (e.g., dispatch matching scores), enforcing backend Zod schema validation before saving results to MongoDB.
+4.  **State Management & Memory (Redis + Redux/Zustand):** Maintained a rolling conversation context history window in Redis using `LTRIM` to optimize context window limits, while updating normalized frontend state in Redux Toolkit or Zustand.
+5.  **Resilience & Fault Tolerance:** Wrapped all AI service calls with exponential backoff retries (`p-retry`), fallback model hierarchies (`gemini-1.5-pro` -> `gemini-1.5-flash`), and rule-based fallback engines to guarantee 100% platform availability.
+
+**অনুবাদ (Bangla Translation):**
+MERN স্ট্যাক আর্কিটেকচারে AI ফিচারগুলো যুক্ত করার সম্পূর্ণ টেকনিক্যাল পদ্ধতি:
+1.  **ব্যাকএন্ড এপিআই লেয়ার (Node.js/Express + Google Gen AI SDK):** এক্সপ্রেস ব্যাকএন্ডে অফিসিয়াল `@google/genai` SDK ইনস্টল করা হয়। API Key কে সম্পূর্ণ নিরাপদ রাখতে এটি কেবল সার্ভার পরিবেশের সিক্রেটে রাখা হতো (ক্লায়েন্টে কখনো পাঠানো হতো না)।
+2.  **রিয়েল-টাইম টোকেন স্ট্রিমিং (Socket.IO):** Gemini-র `generateContentStream()` থেকে ছোট ছোট টোকেন পাওয়ার সাথে সাথে Socket.IO ইভেন্টের মাধ্যমে ফ্রন্টএন্ডে পাঠিয়ে ৬০ FPS লাইভ টাইপিং অ্যানিমেশন তৈরি করা হতো।
+3.  **Structured JSON ও Function Calling:** লজিক্যাল ফিল্ডের জন্য Gemini-র `responseSchema` এবং `responseMimeType: "application/json"` অন করা হতো এবং ব্যাকএন্ডে **Zod Schema** দিয়ে ডেটা ভ্যালিডেশন করা হতো।
+4.  **স্টেট ও মেমোরি ম্যানেজমেন্ট (Redis + Redux/Zustand):** চ্যাট হিস্ট্রি মেমোরি নিয়ন্ত্রণে রাখতে Redis-এ `LTRIM` দিয়ে নির্দিষ্ট সংখ্যক কথা সেভ রাখা হতো এবং ফ্রন্টএন্ডে Redux/Zustand দিয়ে ইউআই আপডেট করা হতো।
+5.  **ফেল্ট টলারেন্স ও সিকিউরিটি:** AI ডাউন থাকলে `p-retry` দিয়ে রি-ট্রাই, দ্রুতগতির `flash` মডেলে রূপান্তর এবং পরিশেষে রুল-বেসড অ্যালগরিদমে অটো-ডিগ্রেড করার আর্কিটেকচার ছিল, যার ফলে এপিআই ফেইল করলেও প্রজেক্ট ১০০% চালু থাকত।
